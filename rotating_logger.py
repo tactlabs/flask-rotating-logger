@@ -43,6 +43,7 @@ def start():
 if __name__ == '__main__':
     handler = RotatingFileHandler('/Users/rajacsp/tactlogs/tout.log', maxBytes=MAX_BYTES, backupCount=100)
 
+    # https://stackoverflow.com/questions/43109355/logging-setlevel-is-being-ignored
     logging.basicConfig(level=logging.DEBUG, format='%(message)s')
     #handler.setLevel(logging.DEBUG)
     app.logger.addHandler(handler)
